@@ -162,3 +162,7 @@ img {
     width: 100px; /* Adjust the size as needed */
     height: 100px;
 }
+
+.logo {
+    margin-top: 20px;
+}
