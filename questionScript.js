@@ -56,8 +56,13 @@ button1.addEventListener('click', function () {
     updateProgressBar();
     // 질문이 끝나기 전까진 showPage, 질문이 끝난다면 showResult
     if (currentQuestionIndex < questions.length - 1) {
+        if(currentQuestionIndex == 2) {
+            point += 1;
+        } else if(currentQuestionIndex == 3) {
+            point += 4;
+        }
+        console.log(`${point}`)
         currentQuestionIndex++;
-        point += 10;
         showPage();
     } else {
         showResult();
@@ -67,7 +72,13 @@ button1.addEventListener('click', function () {
 button2.addEventListener('click', function () {
     updateProgressBar();
     if (currentQuestionIndex < questions.length - 1) {
+        if(currentQuestionIndex == 2) {
+            point += 2;
+        } else if(currentQuestionIndex == 3) {
+            point += 6;
+        }
         currentQuestionIndex++;
+        console.log(`${point}`)
         showPage();
     } else {
         showResult();
