@@ -2,18 +2,18 @@
 const resultDiv = document.getElementById('level');
 const imageContainer = document.getElementById('image-container');
 
-const resultTypeLabel = document.getElementById('result-my-type-label');
-const resultPsnLabel = document.getElementById('result-my-psn-label');
-const saveTipLabel = document.getElementById('result-save-tip-label');
+// const resultTypeLabel = document.getElementById('result-my-type-label');
+// const resultPsnLabel = document.getElementById('result-my-psn-label');
+// const saveTipLabel = document.getElementById('result-save-tip-label');
 
 const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
 const kakaoShareButton = document.getElementById('kakaoShareButton');
 const instaShareButton = document.getElementById('instaShareButton');
 
-const useMona = document.getElementById('move-to-mona');
-const findMonaPlan = document.getElementById('move-to-find-plan');
-const planImg = document.getElementById('recommend-plan-img');
+const useKP = document.getElementById('move-to-kp');
+// const findMonaPlan = document.getElementById('move-to-find-plan');
+// const planImg = document.getElementById('recommend-plan-img');
 const restartButton = document.getElementById('restart');
 const copyLink = document.getElementById('result-copy-link');
 
@@ -24,29 +24,19 @@ const urlParams = new URLSearchParams(window.location.search);
 const point = urlParams.get('option');
 
 const result_level0 = {
-    charac_img_path: './Images/mona_character.png',
-    level_title_path: './Images/Result/Level0/result_title_level0.png',
-    type_img_path: './Images/Result/Level0/level0_type.png',
+    charac_img_path: './Images/Question/q2.png'
 };
 const result_level1 = {
-    charac_img_path: './Images/mona_character.png',
-    level_title_path: './Images/Result/Level1/result_title_level1.png',
-    type_img_path: './Images/Result/Level1/level1_type.png',
+    charac_img_path: './Images/Question/q2.png'
 };
 const result_level2 = {
-    charac_img_path: './Images/mona_character.png',
-    level_title_path: './Images/Result/Level2/result_title_level2.png',
-    type_img_path: './Images/Result/Level2/level2_type.png',
+    charac_img_path: './Images/Question/q2.png'
 };
 const result_level3 = {
-    charac_img_path: './Images/mona_character.png',
-    level_title_path: './Images/Result/Level3/result_title_level3.png',
-    type_img_path: './Images/Result/Level3/level3_type.png',
+    charac_img_path: './Images/Question/q2.png'
 };
 const result_level4 = {
-    charac_img_path: './Images/mona_character.png',
-    level_title_path: './Images/Result/Level4/result_title_level4.png',
-    type_img_path: './Images/Result/Level4/level4_type.png',
+    charac_img_path: './Images/Question/q2.png'
 };
 
 // 공유하기 버튼
@@ -83,14 +73,14 @@ function redirectToInstagramWebsite() {
 restartButton.addEventListener('click', function () {
     window.location.href = 'index.html'
 });
-// 모나 서비스 이용해보기 버튼
-useMona.addEventListener('click', function () {
-    window.location.href = 'https://mobilemona.co.kr'
+// 키라필라테스 구경하러가기 버튼
+useKP.addEventListener('click', function () {
+    window.location.href = 'https://www.instagram.com/kira_pilates/'
 });
-// 모나 요금제 찾아보기
-findMonaPlan.addEventListener('click', function () {
-    window.location.href = 'https://mobilemona.co.kr/view/plan/findListNext.aspx'
-});
+// // 모나 요금제 찾아보기
+// findMonaPlan.addEventListener('click', function () {
+//     window.location.href = 'https://mobilemona.co.kr/view/plan/findListNext.aspx'
+// });
 // 결과 링크 복사
 copyLink.addEventListener("click", () => {
     const currentLink = window.location.href; // 현재 페이지의 링크 가져오기
@@ -129,47 +119,25 @@ download_result.addEventListener('click', function () {
 function showResult(point) {
     if(point == 5) {
         console.log("동작1");
-        level_title_img = result_level0.level_title_path
         character_img = result_level0.charac_img_path
-        level_type_img = result_level0.type_img_path
     } else if(point == 7) {
         console.log("동작2");
-        level_title_img = result_level1.level_title_path
         character_img = result_level1.charac_img_path
-        level_type_img = result_level1.type_img_path
-        
     } else if(point == 6) {
         console.log("동작3");
-        level_title_img = result_level2.level_title_path
         character_img = result_level2.charac_img_path
-        level_type_img = result_level2.type_img_path
-        
     } else if(point == 8) {
         console.log("동작4");
-        level_title_img = result_level3.level_title_path
         character_img = result_level3.charac_img_path
-        level_type_img = result_level3.type_img_path
-        
     } 
 
     imageContainer.src = `${character_img}`
-    imageContainer.style.width = '100%'
+    imageContainer.style.width = '50%'
     imageContainer.style.maxWidth = '480px'
 
-    resultDiv.src = `${level_title_img}`
-    resultDiv.style.width = '100%'
-    resultDiv.style.maxWidth = '480px'
-
-    planImg.src = plan_img
-
-    resultTypeLabel.src = `${level_type_img}`
-    resultTypeLabel.style.width = '100%'
-
-    resultPsnLabel.src = level_psn_img
-    resultPsnLabel.style.width = '100%'
-
-    saveTipLabel.src = level_tip_img
-    saveTipLabel.style.width = '100%'
+    // resultDiv.src = `${level_title_img}`
+    // resultDiv.style.width = '100%'
+    // resultDiv.style.maxWidth = '480px'
 }
 
 
