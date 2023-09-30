@@ -91,7 +91,8 @@ function showPage() {
 function showImage() {
     const imageUrl = images[currentQuestionIndex];
     questionImage.src = `${imageUrl}`
-    questionImage.style.width = `264px`;
+    questionImage.style.width = `160px`;
+    questionImage.style.height = `auto`;
 }
 
 // 질문 출력하기

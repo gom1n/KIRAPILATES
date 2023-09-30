@@ -25,12 +25,12 @@ body {
 }
 #title {
     margin-top: 10px;
-    width: 489px;
-    height: 259px;
+    width: 280px;
+    height: auto;
 }
 #test_character {
     margin-top: 50px;
-    width: 625px;
+    width: 425px;
     height: auto;
 }
 /* 시작하기 버튼 */
@@ -43,13 +43,13 @@ body {
     align-items: center;
 }
 #startButton {
-    width: 318px;
-    height: 80px;
+    width: 250px;
+    height: auto;
     margin: 8px;
 }
 #link_share {
-    width: 318px;
-    height: 80px;
+    width: 250px;
+    height: auto;
     margin: 8px;
 }
 
