@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONA 절약 유형 테스트 결과</title>
+    
+    <link rel="stylesheet" href="resultStyles.css">
+</head>
+<body>
+    <!-- 결과 컨테이너: 이미지, 레벨-->
+    <div class="result-container">
+        <!-- 결과 타이틀 -->
+        <img id="result-title" src="./Images/Result/result_title.png">
+        <!-- 결과 레벨 -->
+        <img id="level">
+        <!-- 이미지 -->
+        <img id="image-container">
+    </div>
+    <!-- 내 절약 유형 요약 -->
+    <div class="result-my-type-container">
+        <img id="result-my-type-label">
+    </div>
+    <!-- 절약 유형으로 본 나의 성향 -->
+    <div class="result-my-psn-container">
+        <img id="result-my-psn-label">
+    </div>
+    <!-- 절약 Tip -->
+    <div class="result-save-tip-container">
+        <img id="result-save-tip-label">
+    </div>
+
+    <!-- 추천하는 요금제 -->
+    <div class="plan-container">
+        <img id="recommend-plan-img">
+        <img id="move-to-find-plan" src="./Images/Result/move_to_mona.png">
+    </div>
+    <!-- 공유하기 버튼 -->
+    <div id="share-container">
+        <div id="share-title">SNS로 공유하기</div>
+        <div id="share-button-container">
+            <img id="facebookShareButton" src="./Images/Result/SNSIcon/facebook-icon.png">
+            <img id="instaShareButton" src="./Images/Result/SNSIcon/instagram.png">
+            <img id="kakaoShareButton" src="./Images/Result/SNSIcon/kakao_icon.png">
+            <img id="twitterShareButton" src="./Images/Result/SNSIcon/twitter-icon.png">
+        </div>
+    </div>
+    <div class="etc-container">
+        <!-- 결과창 다운로드 -->
+        <button id="download-result">결과 다운로드</button>
+        <!-- 결과 링크 복사 -->
+        <button id="result-copy-link">결과 링크 복사</button>
+    </div>
+    <!-- 테스트 다시하기 -->
+    <button id="move-to-mona">MONA 홈페이지 방문해보기</button>
+    <!-- 테스트 다시하기 -->
+    <button id="restart">테스트 다시하기</button>
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="resultScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIRA PILATES 필라테스 테스트</title>
+    <link rel="stylesheet" href="questionStyles.css">
+</head>
+<body>
+    <!-- 로딩 뷰: 테스트 완료 시 띄움 -->
+    <div id="loadingContainer" style="display: none;">
+        <img id="loadingImage" src="https://github.com/gom1n/ImageSwipeWebTest/assets/87636557/84296335-c191-4c23-a3a9-6ab776f8cf3b" alt="Loading">
+    </div>
+    <!-- 퀴즈 컨테이너 -->
+    <div class="quiz-container">
+        <!-- 상태바 -->
+        <div class="progress-container">
+            <div id="question-count">1/6</div>
+            <div id="progress-background"></div>
+            <div id="progress-bar"></div>
+            <div id="icon"><img id="progressbar_icon" src="./Images/Question/progressbar_icon.png"></div>
+        </div>
+        
+        <!-- 질문 라벨 -->
+        <div class="question" id="question"></div>
+        <!-- 이미지 -->
+        <div id="image-container">
+            <img id="question-image">
+        </div>
+        <!-- 선택지 버튼 2개 -->
+        <div class="button-container">
+            <button class="button1" id="button1"></button>
+            <button class="button2" id="button2"></button>
+        </div>
+    </div>
+    <script src="questionScript.js"></script>
+</body>
+</html>
