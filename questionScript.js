@@ -91,7 +91,7 @@ function showPage() {
 function showImage() {
     const imageUrl = images[currentQuestionIndex];
     questionImage.src = `${imageUrl}`
-    questionImage.style.width = `160px`;
+    questionImage.style.width = `60%`;
     questionImage.style.height = `auto`;
 }
 
