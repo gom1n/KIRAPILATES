@@ -15,20 +15,17 @@ body {
 /* 결과 컨테이너 */
 .result-container {
     position: relative;
-    margin: 40px auto 0px auto;
-
+    margin: 20px auto 0px auto;
     max-width: 480px;
-    min-height: 600px;
-    
-    text-align: center;
 
-    white-space: pre-line; /* 줄바꿈 문자(\n)를 줄 바꿈으로 처리 */
-    display: inline-block; /* 인라인 블록 요소로 표시 */
-    word-wrap: break-word; /* 단어가 길어질 경우 자동으로 줄 바꿈 */
+    text-align: center;
+    white-space: pre-line;
+    display: inline-block;
+    word-wrap: break-word; 
 }
 
 #guide {
-    margin: 25px auto;
+    margin: 25px auto 0px 25px;
     color: #FF7A7A;
     font-size: 16px;
     font-weight: 600;
@@ -109,7 +106,7 @@ body {
     text-align: center;
     cursor: pointer;
 
-    margin: 0px auto 17px auto;
+    margin: 0px auto 25px auto;
 }
 
 .etc-container {
@@ -119,8 +116,12 @@ body {
     display: flex; 
     justify-content: space-between;
     align-items: center; 
-    margin-bottom: 13px;
-    /* width: 80%; */
+    margin: 10px auto 13px auto;
+}
+
+#logo {
+    width: 7%;
+    margin: 30px auto;
 }
 
 /* 반응형 제작 */
@@ -129,19 +130,20 @@ body {
         width: 60%;
     }
     #guide {
-        margin: 20px auto;
+        margin: 15px auto 0px auto;
         font-size: 10px;
         font-weight: 600;
     }
     #level-title, #level-desc, #level-howto {
         width: 60%;
         height: auto;
+        margin: 0px;
     }
 
     .etc-container {
         width: 60%;
         justify-content: space-between;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         min-height: 0px;
     }
 
@@ -168,7 +170,7 @@ body {
         min-height: 100px;
         width: 60%;
         height: auto;
-        margin: 0px auto 5px auto;
+        margin: 20px auto 5px auto;
     }
     #share-link-title {
         margin: 10px;
@@ -181,6 +183,10 @@ body {
     #once, #move-to-kp, #restart {
         width: 60%;
         height: auto;
-        margin: 0px auto 10px auto;
+        margin: 0px auto 15px auto;
+    }
+    #logo {
+        width: 20%;
+        margin: 30px auto;
     }
 }
