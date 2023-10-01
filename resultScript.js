@@ -158,9 +158,7 @@ function showResult(point) {
     imageContainer.style.maxWidth = '480px'
 
     resultTitleLabel.src = `${title_img}`
-
     resultDescriptionLabel.src = `${type_img}`
-
     resultHowToLabel.src = `${howto_img}`
 }
 
@@ -176,16 +174,16 @@ function shareOnTwitter() {
 }
 
 // 카카오톡 공유하기 기능
-Kakao.init('ff7a17f75d28483cf203553d036aa097');
+Kakao.init('ea73ab816ec2bea23b0b8eeeee3e8cd8');
 function kakaoShare() {
     Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
         title: `${resultContent(point)}`,
-        description: '절약 유형 테스트 결과입니다.',
-        imageUrl: './Images/result_title.png',
+        description: 'KIRA PILATES 필라테스 테스트 결과입니다.',
+        imageUrl: 'https://github.com/gom1n/KIRAPILATES/assets/87636557/df99aeb1-5613-4b70-bb63-fa5df6b8971c',
         link: {
-          mobileWebUrl: 'https://konai-kvl.github.io/TestWebPage/',
+          mobileWebUrl: 'https://gom1n.github.io/KIRAPILATES/',
           webUrl: 'https://gom1n.github.io/KIRAPILATES/',
         },
       },
