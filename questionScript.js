@@ -137,7 +137,7 @@ function updateProgressBar() {
         progress = 6;
     }
     progressBar.style.width = `${progress * 16.6}%`;
-    question_count.textContent = `${progress}/6`;
+    question_count.textContent = `${progress + 1}/6`;
     progress_icon.style.marginLeft = `${progress * 16.6}%`;
 
     // 페이지 로딩이 끝나면 상태바 숨기기
