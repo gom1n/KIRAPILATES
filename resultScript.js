@@ -2,41 +2,51 @@
 const resultDiv = document.getElementById('level');
 const imageContainer = document.getElementById('image-container');
 
-// const resultTypeLabel = document.getElementById('result-my-type-label');
-// const resultPsnLabel = document.getElementById('result-my-psn-label');
-// const saveTipLabel = document.getElementById('result-save-tip-label');
+const resultTitleLabel = document.getElementById('level-title');
+const resultDescriptionLabel = document.getElementById('level-desc');
+const resultHowToLabel = document.getElementById('level-howto');
 
 const facebookShareButton = document.getElementById('facebookShareButton');
 const twitterShareButton = document.getElementById('twitterShareButton');
 const kakaoShareButton = document.getElementById('kakaoShareButton');
 const instaShareButton = document.getElementById('instaShareButton');
 
-const useKP = document.getElementById('move-to-kp');
-// const findMonaPlan = document.getElementById('move-to-find-plan');
-// const planImg = document.getElementById('recommend-plan-img');
-const restartButton = document.getElementById('restart');
+const download_result = document.getElementById('download-result');
 const copyLink = document.getElementById('result-copy-link');
 
-const download_result = document.getElementById('download-result');
+const useKP = document.getElementById('move-to-kp');
+const restartButton = document.getElementById('restart');
+const onceButton = document.getElementById('once');
+
+
 
 // 현재 페이지의 URL에서 매개변수 값 읽기
 const urlParams = new URLSearchParams(window.location.search);
 const point = urlParams.get('option');
 
-const result_level0 = {
-    charac_img_path: './Images/Question/q2.png'
-};
 const result_level1 = {
-    charac_img_path: './Images/Question/q2.png'
+    charac_img_path: './Images/Question/q2.png',
+    title_img_path: './Images/Result/Level1/lv1_title.png',
+    type_img_path: './Images/Result/Level1/lv1_type.png',
+    howto_img_path: './Images/Result/Level1/lv1_howto.png'
 };
 const result_level2 = {
-    charac_img_path: './Images/Question/q2.png'
+    charac_img_path: './Images/Question/q2.png',
+    title_img_path: './Images/Result/Level2/lv2_title.png',
+    type_img_path: './Images/Result/Level2/lv2_type.png',
+    howto_img_path: './Images/Result/Level2/lv2_howto.png'
 };
 const result_level3 = {
-    charac_img_path: './Images/Question/q2.png'
+    charac_img_path: './Images/Question/q2.png',
+    title_img_path: './Images/Result/Level3/lv3_title.png',
+    type_img_path: './Images/Result/Level3/lv3_type.png',
+    howto_img_path: './Images/Result/Level3/lv3_howto.png'
 };
 const result_level4 = {
-    charac_img_path: './Images/Question/q2.png'
+    charac_img_path: './Images/Question/q2.png',
+    title_img_path: './Images/Result/Level4/lv4_title.png',
+    type_img_path: './Images/Result/Level4/lv4_type.png',
+    howto_img_path: './Images/Result/Level4/lv4_howto.png'
 };
 
 // 공유하기 버튼
@@ -77,10 +87,10 @@ restartButton.addEventListener('click', function () {
 useKP.addEventListener('click', function () {
     window.location.href = 'https://www.instagram.com/kira_pilates/'
 });
-// // 모나 요금제 찾아보기
-// findMonaPlan.addEventListener('click', function () {
-//     window.location.href = 'https://mobilemona.co.kr/view/plan/findListNext.aspx'
-// });
+// 1회 무료체험하러가기 버튼
+onceButton.addEventListener('click', function () {
+    window.location.href = 'https://m.place.naver.com/place/1145418497/home?type=photoView'
+});
 // 결과 링크 복사
 copyLink.addEventListener("click", () => {
     const currentLink = window.location.href; // 현재 페이지의 링크 가져오기
@@ -119,25 +129,39 @@ download_result.addEventListener('click', function () {
 function showResult(point) {
     if(point == 5) {
         console.log("동작1");
-        character_img = result_level0.charac_img_path
+        character_img = result_level1.charac_img_path
+        title_img = result_level1.title_img_path
+        type_img = result_level1.type_img_path
+        howto_img = result_level1.howto_img_path
     } else if(point == 7) {
         console.log("동작2");
-        character_img = result_level1.charac_img_path
+        character_img = result_level2.charac_img_path
+        title_img = result_level2.title_img_path
+        type_img = result_level2.type_img_path
+        howto_img = result_level2.howto_img_path
     } else if(point == 6) {
         console.log("동작3");
-        character_img = result_level2.charac_img_path
+        character_img = result_level3.charac_img_path
+        title_img = result_level3.title_img_path
+        type_img = result_level3.type_img_path
+        howto_img = result_level3.howto_img_path
     } else if(point == 8) {
         console.log("동작4");
-        character_img = result_level3.charac_img_path
+        character_img = result_level4.charac_img_path
+        title_img = result_level4.title_img_path
+        type_img = result_level4.type_img_path
+        howto_img = result_level4.howto_img_path
     } 
 
     imageContainer.src = `${character_img}`
     imageContainer.style.width = '50%'
     imageContainer.style.maxWidth = '480px'
 
-    // resultDiv.src = `${level_title_img}`
-    // resultDiv.style.width = '100%'
-    // resultDiv.style.maxWidth = '480px'
+    resultTitleLabel.src = `${title_img}`
+
+    resultDescriptionLabel.src = `${type_img}`
+
+    resultHowToLabel.src = `${howto_img}`
 }
 
 
