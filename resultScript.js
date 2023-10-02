@@ -25,7 +25,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const point = urlParams.get('option');
 
 const result_level1 = {
-    charac_img_path: './Images/Question/q2.png',
+    charac_img_path: './Images/Result/Level1/lv1_result.png',
     title_img_path: './Images/Result/Level1/lv1_title.png',
     type_img_path: './Images/Result/Level1/lv1_type.png',
     howto_img_path: './Images/Result/Level1/lv1_howto.png'
@@ -37,7 +37,7 @@ const result_level2 = {
     howto_img_path: './Images/Result/Level2/lv2_howto.png'
 };
 const result_level3 = {
-    charac_img_path: './Images/Question/q2.png',
+    charac_img_path: './Images/Result/Level3/lv3_result.png',
     title_img_path: './Images/Result/Level3/lv3_title.png',
     type_img_path: './Images/Result/Level3/lv3_type.png',
     howto_img_path: './Images/Result/Level3/lv3_howto.png'
@@ -128,25 +128,21 @@ download_result.addEventListener('click', function () {
 // 결과 페이지
 function showResult(point) {
     if(point == 5) {
-        console.log("동작1");
         character_img = result_level1.charac_img_path
         title_img = result_level1.title_img_path
         type_img = result_level1.type_img_path
         howto_img = result_level1.howto_img_path
     } else if(point == 7) {
-        console.log("동작2");
         character_img = result_level2.charac_img_path
         title_img = result_level2.title_img_path
         type_img = result_level2.type_img_path
         howto_img = result_level2.howto_img_path
     } else if(point == 6) {
-        console.log("동작3");
         character_img = result_level3.charac_img_path
         title_img = result_level3.title_img_path
         type_img = result_level3.type_img_path
         howto_img = result_level3.howto_img_path
     } else if(point == 8) {
-        console.log("동작4");
         character_img = result_level4.charac_img_path
         title_img = result_level4.title_img_path
         type_img = result_level4.type_img_path
@@ -181,7 +177,7 @@ function kakaoShare() {
       content: {
         title: `${resultContent(point)}`,
         description: 'KIRA PILATES 필라테스 테스트 결과입니다.',
-        imageUrl: 'https://github.com/gom1n/KIRAPILATES/assets/87636557/df99aeb1-5613-4b70-bb63-fa5df6b8971c',
+        imageUrl: './Images/Question/q2.png',
         link: {
           mobileWebUrl: 'https://gom1n.github.io/KIRAPILATES/',
           webUrl: 'https://gom1n.github.io/KIRAPILATES/',
@@ -202,13 +198,13 @@ function kakaoShare() {
 }
 function resultContent(point) {
     if(point == 5) {
-        result = "동작1"
+        result = "풋워크 동작을 추천할게요!"
     } else if(point == 7) {
-        result = "동작2"
+        result = "런지 동작을 추천할게요!"
     } else if(point == 6) {
-        result = "동작3"
+        result = "로우 동작을 추천할게요!"
     } else if(point == 8) {
-        result = "동작4"
+        result = "티저 동작을 추천할게요!"
     }
 
     return result
