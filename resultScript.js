@@ -31,7 +31,7 @@ const result_level1 = {
     howto_img_path: './Images/Result/Level1/lv1_howto.png'
 };
 const result_level2 = {
-    charac_img_path: './Images/Question/q2.png',
+    charac_img_path: './Images/Result/Level2/lv2_result.png',
     title_img_path: './Images/Result/Level2/lv2_title.png',
     type_img_path: './Images/Result/Level2/lv2_type.png',
     howto_img_path: './Images/Result/Level2/lv2_howto.png'
@@ -43,7 +43,7 @@ const result_level3 = {
     howto_img_path: './Images/Result/Level3/lv3_howto.png'
 };
 const result_level4 = {
-    charac_img_path: './Images/Question/q2.png',
+    charac_img_path: './Images/Result/Level4/lv4_result.png',
     title_img_path: './Images/Result/Level4/lv4_title.png',
     type_img_path: './Images/Result/Level4/lv4_type.png',
     howto_img_path: './Images/Result/Level4/lv4_howto.png'
@@ -150,7 +150,7 @@ function showResult(point) {
     } 
 
     imageContainer.src = `${character_img}`
-    imageContainer.style.width = '50%'
+    imageContainer.style.width = '85%'
     imageContainer.style.maxWidth = '480px'
 
     resultTitleLabel.src = `${title_img}`
