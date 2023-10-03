@@ -12,12 +12,12 @@ let point = 0;
 
 // 질문 Array
 const questions = [
-    '필라테스를 한다면,\n당신의 목적은?',
-    '평소 몸이',
-    '무릎과 고관절에서\n반복해서 딱딱 소리가 난다.',
-    '어깨 통증이',
-    '이 동작 할 수 있다? 없다?',
-    '필라테스 무료 1회 체험이 있다면?'
+    '필라테스를 한다면,\n당신의 목적은 뭔가요?',
+    '평소 몸이 아픈 편인가요?',
+    '무릎과 고관절에서\n반복해서 딱딱 소리가 나나요?',
+    '어깨 통증이 있나요?',
+    '이 동작 할 수 있나요?!',
+    '필라테스 무료 1회 체험이 있다면~?'
 ];
 
 // 이미지 Array
@@ -26,7 +26,7 @@ const images = [
     './Images/Question/q2.png', 
     './Images/Question/q3.png', 
     './Images/Question/q4.png', 
-    './Images/Question/q1.png', 
+    './Images/Question/q5.png', 
     './Images/Question/q6.png'
 ];
 
