@@ -29,28 +29,32 @@ const result_level1 = {
     title_img_path: './Images/Result/Level1/lv1_title.png',
     type_img_path: './Images/Result/Level1/lv1_type.png',
     howto_img_path: './Images/Result/Level1/lv1_howto.png',
-    download_img_path: './Images/Result/Level1/lv1_download.png'
+    download_img_path: './Images/Result/Level1/lv1_download.png',
+    kakao_share_img_path: './Images/Result/Level1/lv1_share_kakao.png'
 };
 const result_level2 = {
     charac_img_path: './Images/Result/Level2/lv2_result.png',
     title_img_path: './Images/Result/Level2/lv2_title.png',
     type_img_path: './Images/Result/Level2/lv2_type.png',
     howto_img_path: './Images/Result/Level2/lv2_howto.png',
-    download_img_path: './Images/Result/Level2/lv2_download.png'
+    download_img_path: './Images/Result/Level2/lv2_download.png',
+    kakao_share_img_path: './Images/Result/Level2/lv2_share_kakao.png'
 };
 const result_level3 = {
     charac_img_path: './Images/Result/Level3/lv3_result.png',
     title_img_path: './Images/Result/Level3/lv3_title.png',
     type_img_path: './Images/Result/Level3/lv3_type.png',
     howto_img_path: './Images/Result/Level3/lv3_howto.png',
-    download_img_path: './Images/Result/Level3/lv3_download.png'
+    download_img_path: './Images/Result/Level3/lv3_download.png',
+    kakao_share_img_path: './Images/Result/Level3/lv3_share_kakao.png'
 };
 const result_level4 = {
     charac_img_path: './Images/Result/Level4/lv4_result.png',
     title_img_path: './Images/Result/Level4/lv4_title.png',
     type_img_path: './Images/Result/Level4/lv4_type.png',
     howto_img_path: './Images/Result/Level4/lv4_howto.png',
-    download_img_path: './Images/Result/Level4/lv4_download.png'
+    download_img_path: './Images/Result/Level4/lv4_download.png',
+    kakao_share_img_path: './Images/Result/Level4/lv4_share_kakao.png'
 };
 
 // 공유하기 버튼
@@ -190,7 +194,7 @@ function kakaoShare() {
       content: {
         title: `${resultContent(point)}`,
         description: 'KIRA PILATES 필라테스 테스트 결과입니다.',
-        imageUrl: './Images/Question/q2.png',
+        imageUrl: `${kakaoShareImageUrl(point)}`,
         link: {
           mobileWebUrl: 'https://gom1n.github.io/KIRAPILATES/',
           webUrl: 'https://gom1n.github.io/KIRAPILATES/',
@@ -209,6 +213,7 @@ function kakaoShare() {
       installTalk: true,
     })
 }
+// 카카오 공유 시 문구 설정
 function resultContent(point) {
     if(point == 5) {
         result = "풋워크 동작을 추천할게요!"
@@ -218,6 +223,20 @@ function resultContent(point) {
         result = "로우 동작을 추천할게요!"
     } else if(point == 8) {
         result = "티저 동작을 추천할게요!"
+    }
+
+    return result
+}
+// 카카오 공유 시 이미지 설정
+function kakaoShareImageUrl(point) {
+    if(point == 5) {
+        result = result_level1.kakao_share_img_path
+    } else if(point == 7) {
+        result = result_level2.kakao_share_img_path
+    } else if(point == 6) {
+        result = result_level3.kakao_share_img_path
+    } else if(point == 8) {
+        result = result_leve41.kakao_share_img_path
     }
 
     return result
