@@ -27,7 +27,7 @@ const images = [
     './Images/Question/q3.png', 
     './Images/Question/q4.png', 
     './Images/Question/q1.png', 
-    './Images/Question/q1.png'
+    './Images/Question/q6.png'
 ];
 
 const button1Text = [
