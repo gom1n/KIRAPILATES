@@ -28,25 +28,29 @@ const result_level1 = {
     charac_img_path: './Images/Result/Level1/lv1_result.png',
     title_img_path: './Images/Result/Level1/lv1_title.png',
     type_img_path: './Images/Result/Level1/lv1_type.png',
-    howto_img_path: './Images/Result/Level1/lv1_howto.png'
+    howto_img_path: './Images/Result/Level1/lv1_howto.png',
+    download_img_path: './Images/Result/Level1/lv1_download.png'
 };
 const result_level2 = {
     charac_img_path: './Images/Result/Level2/lv2_result.png',
     title_img_path: './Images/Result/Level2/lv2_title.png',
     type_img_path: './Images/Result/Level2/lv2_type.png',
-    howto_img_path: './Images/Result/Level2/lv2_howto.png'
+    howto_img_path: './Images/Result/Level2/lv2_howto.png',
+    download_img_path: './Images/Result/Level2/lv2_download.png'
 };
 const result_level3 = {
     charac_img_path: './Images/Result/Level3/lv3_result.png',
     title_img_path: './Images/Result/Level3/lv3_title.png',
     type_img_path: './Images/Result/Level3/lv3_type.png',
-    howto_img_path: './Images/Result/Level3/lv3_howto.png'
+    howto_img_path: './Images/Result/Level3/lv3_howto.png',
+    download_img_path: './Images/Result/Level3/lv3_download.png'
 };
 const result_level4 = {
     charac_img_path: './Images/Result/Level4/lv4_result.png',
     title_img_path: './Images/Result/Level4/lv4_title.png',
     type_img_path: './Images/Result/Level4/lv4_type.png',
-    howto_img_path: './Images/Result/Level4/lv4_howto.png'
+    howto_img_path: './Images/Result/Level4/lv4_howto.png',
+    download_img_path: './Images/Result/Level4/lv4_download.png'
 };
 
 // 공유하기 버튼
@@ -109,12 +113,21 @@ copyLink.addEventListener("click", () => {
 // 결과 다운로드 버튼 클릭 이벤트
 download_result.addEventListener('click', function () {
     // 새로운 링크 요소 생성
-    const imageUrl = './Images/level0_download.png'
+    if(point == 5) {
+        imageUrl = result_level1.download_img_path
+        filename = "풋워크"
+    } else if(point == 7) {
+        imageUrl = result_level2.download_img_path
+        filename = "런지"
+    } else if(point == 6) {
+        imageUrl = result_level3.download_img_path
+        filename = "로우"
+    } else if(point == 8) {
+        imageUrl = result_level4.download_img_path
+        filename = "티저"
+    }
     const link = document.createElement("a");
     link.href = imageUrl;
-
-    // 다운로드할 파일 이름 설정 (선택적)
-    const filename = imageUrl.split("/").pop(); // URL에서 파일 이름 추출
     link.download = filename;
 
     // 링크를 클릭하여 다운로드 시작
